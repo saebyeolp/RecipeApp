@@ -71,6 +71,8 @@ table th, table td { vertical-align:middle; }
   background-color: #eee;
 }
 
+/**************** Search *****************/
+
 .search-form {
   min-height: 10vh;
   display: flex;
