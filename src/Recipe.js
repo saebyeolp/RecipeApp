@@ -1,17 +1,23 @@
 import React from 'react';
 
-const Recipe = ({title, totalTime, url, dietLabels, image, ingredients}) => {
+const Recipe = ({title, url, dietLabels, image, ingredients}) => {
     return (
-        <div>
-            <h1>{title}</h1>
-            <p>Cooking time :{totalTime}min {dietLabels}</p>
+        <div className="recipeBox">
+            <img src={image} alt={title}></img>
+            <div className="titleBox">
+                <h1>{title}</h1>
+                <p>
+                    {/* <span className="dietLabel">{dietLabels}</span> */}
+                    {dietLabels.length == 0 ? <span className="dietLabel">{dietLabels}</span> : <span></span> }
+                </p>
+            </div>
+            <div className="smallTitle">Ingredients</div>
             <ul>
                 {ingredients.map(ingredient => (
                     <li>{ingredient.text}</li>
                 ))}
             </ul>
-            <p>{url}</p>
-            <img src={image} alt=""></img>
+            <a className="recipeBtn" href={url} target="_blank">See Recipe 》</a>
         </div>
     );
 }
