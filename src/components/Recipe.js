@@ -3,7 +3,7 @@ import React from 'react';
 const Recipe = ({title, url, dietLabels, image, ingredients}) => {
     return (
         <div className="recipeBox">
-            <img src={image} alt={title}></img>
+            <div className="recipePic"><img src={image} alt={title}></img></div>
             <div className="titleBox">
                 <h1>{title}</h1>
                 <p>

@@ -67,11 +67,24 @@ table th, table td { vertical-align:middle; }
 .App {
   box-sizing: border-box;
   min-height: 100vh;
-  padding: 10px;
-  background-color: #eee;
 }
 
-/**************** Search *****************/
+/**************** Form *****************/
+
+.formWrap {
+  width: 100%;
+  height: 156px;
+  background: url(./img/bg.jpg) repeat-x 0 0;
+  box-sizing: border-box;
+  padding: 40px 20px 10px;
+}
+
+.formWrap h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
 
 .search-form {
   min-height: 10vh;
@@ -103,10 +116,12 @@ table th, table td { vertical-align:middle; }
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 10px 0 10px 10px;
 }
 
 .recipeBox {
-  width: 49%;
+  width: 32.3%;
   box-sizing: border-box;
   background: white;
   border-radius: 15px;
@@ -114,6 +129,14 @@ table th, table td { vertical-align:middle; }
   box-shadow: 1px 1px 2px rgba(115,115,115,.1);
   padding: 20px;
   margin: 0 1% 1% 0;
+}
+
+.recipeBox .recipePic {
+  text-align: center;
+}
+
+.recipeBox .recipePic img {
+  max-width: 100%;
 }
 
 .recipeBox .titleBox {
@@ -157,15 +180,17 @@ table th, table td { vertical-align:middle; }
 
 /**************** Responsive *****************/
 
+
 @media screen and (max-width: 730px) {
   .recipeBox {
-    width: 100%;
-    margin: 0;
-    margin-bottom: 10px;
-  }
-  
-  img {
-    max-width: 100%;
+    width: 49%;
+    margin: 0 1% 1% 0;
   }
 }
 
+@media screen and (max-width: 520px) {
+  .recipeBox {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

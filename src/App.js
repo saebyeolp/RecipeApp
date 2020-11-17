@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Recipe from "./Recipe";
+import Form from './components/Form'
+import Recipe from './components/Recipe';
 import './App.css';
 
 
@@ -36,16 +37,11 @@ const App = () => {
   return (
     <div className="App">
 
-      <form onSubmit={getSearch} className="search-form">
-        <input 
-          className="search-bar" 
-          type="text" 
-          value={search} 
-          onChange={updateSearch}
-          placeholder="Search recipes by ingredients"
-        />
-        <button className="search-button" type="submit">Search</button>
-      </form>
+      <Form 
+        updateSearch={updateSearch}
+        getSearch={getSearch}
+        search={search}
+      />
 
       <div className="recipes">
         {recipes.map(recipe => (
