@@ -7,7 +7,7 @@ const Recipe = ({title, url, dietLabels, image, ingredients}) => {
             <div className="titleBox">
                 <h1>{title}</h1>
                 <p>
-                    {dietLabels.length > 0 ? <span className="dietLabel">{dietLabels}</span> : <span></span> }
+                    {dietLabels.length > 0 ? <span className="dietLabel">{dietLabels}</span> : <span></span>}
                 </p>
             </div>
             <div className="smallTitle">Ingredients</div>
